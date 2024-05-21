@@ -1,12 +1,10 @@
 package main
 
 import (
-	"time"
+	"gorfid/mfrc522"
 )
 
 func main() {
-	for {
-		println("Random text")
-		time.Sleep(time.Millisecond * 1000)
-	}
+	rfid := mfrc522.Init()
+	println(rfid.Version())
 }

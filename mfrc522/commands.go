@@ -1,4 +1,4 @@
-package main
+package mfrc522
 
 // Command is an MFRC55 command.
 // Command definitions are available in Chapter 10 of the MFRC55 datasheet.

@@ -1,6 +1,7 @@
 # GoRFID
 
-GoRFID is a TinyGo-compatible RFID-RC522 library.
+GoRFID is a demo project that uses my Go MFRC522 library to clone MIFARE Classic 1k cards.
+The library is a TinyGo driver for the RFID-RC522 (MFRC522) module.
 
 ## Installation
 
@@ -8,11 +9,49 @@ TODO
 
 ## Usage
 
-TODO
+```go
+package main
+
+import (
+	"github.com/erazemk/gorfid/mfrc522"
+)
+
+func main() {
+	rfid := mfrc522.Init()
+	println(rfid.Version())
+}
+```
+
+TODO: More useful example
+
+### Using with GoLand
+
+TODO: Info about how the code can be run in GoLand
 
 ## Example setup
 
-TODO
+I used the following components:
+- Arduino Nano
+- RFID-RC522 module
+- Two basic RFID cards
+- A push button
+- A 10k Ohm resistor
+- Nine jumper wires
+
+Any device that is compatible with TinyGo can be used, as long as it supports SPI, UART or I2C,
+since that is what the MFRC522 module uses.
+In some cases, you can also skip the button and resistor if the board includes one.
+
+Since I used an Arduino Nano and set communication over SPI, some pins on the module needed to be
+connected to specific pins on the board, because the Arduino Nano has a predefined SPI interface.
+
+TODO: Table of pins
+
+TODO: Image of the setup
+
+TODO: Maybe a diagram of the connections
+
+TODO: Explanation of the setup
 
 ## Extra info
 
@@ -21,4 +60,5 @@ TODO
 
 ## License
 
-GoRFID is licensed under the [GNU LGPLv3](LICENSE) license.
+The MFRC522 library is licensed under the [GNU LGPLv3](LICENSE) license, but
+the demo project code can be freely used and modified.

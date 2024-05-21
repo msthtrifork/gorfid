@@ -1,4 +1,4 @@
-package main
+package mfrc522
 
 // Register is an MFRC55 register.
 // Register definitions are available in Chapter 9 of the MFRC55 datasheet.

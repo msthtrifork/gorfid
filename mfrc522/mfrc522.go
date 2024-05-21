@@ -1,10 +1,16 @@
-package main
+package mfrc522
 
-import "machine"
+import (
+	"machine"
+)
 
+// MFRC522 holds the relevant configuration for the MFRC522 RFID reader.
 type MFRC522 struct {
-	// Technically this is the spi from the host device
+	// SPI is used to communicate with the MFRC522 reader.
+	// This is technically the host's SPI interface.
 	spi machine.SPI
+
+	// MFRC522 also supports UART and I2C, but the library currently only supports SPI.
 }
 
 func (m *MFRC522) WriteRegister(reg Register, val byte) {
