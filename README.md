@@ -9,22 +9,22 @@ The library is a TinyGo driver for the RFID-RC522 (MFRC522) module.
 package main
 
 import (
-	"github.com/erazemk/gorfid/mfrc522"
+    "github.com/erazemk/gorfid/mfrc522"
 )
 
 func main() {
-	rfid := mfrc522.Init()
-	defer rfid.Exit()
-	
-	for {
-		// Read the UID of a card
-		// ReadUID() blocks, so if a board is powerful enough, you can run this in a goroutine
-		uid, err := rfid.ReadUID()
-		if err != nil {
-			println("Error reading UID:", err.Error())
-			return
-		}
-		println("UID:", uid)
+    rfid := mfrc522.Init()
+    defer rfid.Exit()
+
+    for {
+        // Read the UID of a card
+        // ReadUID() blocks, so if a board is powerful enough, you can run this in a goroutine
+        uid, err := rfid.ReadUID()
+        if err != nil {
+            println("Error reading UID:", err.Error())
+            return
+        }
+        println("UID:", uid)
     }
 }
 ```
@@ -76,7 +76,7 @@ The RGB LED was connected to D4 for red, D5 for green, and D6 for blue, with a 1
 between each pin and the LED leg.
 The common leg of the LED was connected to GND.
 
-<img src="res/breadboard.png" height="400" alt="Setup on a breadboard">
+<img src="res/breadboard.jpg" height="400" alt="Setup on a breadboard">
 
 The basic idea of the setup is that once the board is running, it can read and display the UID of
 the card that is placed on the module.
