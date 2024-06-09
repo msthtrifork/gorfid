@@ -2,11 +2,11 @@ package mfrc522
 
 // Register is an MFRC55 register.
 // Register definitions are available in Chapter 9 of the MFRC55 datasheet.
-type Register byte
+type Register = byte
 
 var (
 	// Reserved00Reg is reserved for future use.
-	Reserved00Reg Register = 0x00
+	// Reserved00Reg Register = 0x00
 
 	// CommandReg starts and stops command execution.
 	CommandReg Register = 0x01
@@ -51,10 +51,10 @@ var (
 	CollReg Register = 0x0E
 
 	// Reserved02Reg is reserved for future use.
-	Reserved02Reg Register = 0x0F
+	// Reserved02Reg Register = 0x0F
 
 	// Reserved03Reg is reserved for future use.
-	Reserved03Reg Register = 0x10
+	// Reserved03Reg Register = 0x10
 
 	// ModeReg contains the general modes for transmitting and receiving.
 	ModeReg Register = 0x11
@@ -84,10 +84,10 @@ var (
 	DemodReg Register = 0x19
 
 	// Reserved04Reg is reserved for future use.
-	Reserved04Reg Register = 0x1A
+	// Reserved04Reg Register = 0x1A
 
 	// Reserved05Reg is reserved for future use.
-	Reserved05Reg Register = 0x1B
+	// Reserved05Reg Register = 0x1B
 
 	// MfTxReg controls some MIFARE communication transmit parameters.
 	MfTxReg Register = 0x1C
@@ -96,13 +96,13 @@ var (
 	MfRxReg Register = 0x1D
 
 	// Reserved06Reg is reserved for future use.
-	Reserved06Reg Register = 0x1E
+	// Reserved06Reg Register = 0x1E
 
 	// SerialSpeedReg selects the speed of the serial UART interface.
 	SerialSpeedReg Register = 0x1F
 
 	// Reserved07Reg is reserved for future use.
-	Reserved07Reg Register = 0x20
+	// Reserved07Reg Register = 0x20
 
 	// CRCResultHighReg contains the upper byte of the CRC calculation.
 	CRCResultHighReg Register = 0x21
@@ -111,13 +111,13 @@ var (
 	CRCResultLowReg Register = 0x22
 
 	// Reserved08Reg is reserved for future use.
-	Reserved08Reg Register = 0x23
+	// Reserved08Reg Register = 0x23
 
 	// ModWidthReg controls the ModWidth setting.
 	ModWidthReg Register = 0x24
 
 	// Reserved09Reg is reserved for future use.
-	Reserved09Reg Register = 0x25
+	// Reserved09Reg Register = 0x25
 
 	// RFCfgReg configures the receiver gain.
 	RFCfgReg Register = 0x26
@@ -150,7 +150,7 @@ var (
 	TCounterValLowReg Register = 0x2F
 
 	// Reserved10Reg is reserved for future use.
-	Reserved10Reg Register = 0x30
+	// Reserved10Reg Register = 0x30
 
 	// TestSel1Reg contains the general test signal configuration.
 	TestSel1Reg Register = 0x31
@@ -186,14 +186,14 @@ var (
 	TestADCReg Register = 0x3B
 
 	// Reserved11Reg is reserved for production tests.
-	Reserved11Reg Register = 0x3C
+	// Reserved11Reg Register = 0x3C
 
 	// Reserved12Reg is reserved for production tests.
-	Reserved12Reg Register = 0x3D
+	// Reserved12Reg Register = 0x3D
 
 	// Reserved13Reg is reserved for production tests.
-	Reserved13Reg Register = 0x3E
+	// Reserved13Reg Register = 0x3E
 
 	// Reserved14Reg is reserved for production tests.
-	Reserved14Reg Register = 0x3F
+	// Reserved14Reg Register = 0x3F
 )

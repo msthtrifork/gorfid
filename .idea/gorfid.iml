@@ -13,7 +13,7 @@
           <option value="atmega328p" />
           <option value="atmega" />
           <option value="avr5" />
-          <option value="arduino_nano" />
+          <option value="arduino" />
           <option value="tinygo" />
           <option value="purego" />
           <option value="math_big_pure_go" />

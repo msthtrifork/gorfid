@@ -3,7 +3,7 @@
     <module name="gorfid" />
     <working_directory value="$PROJECT_DIR$" />
     <tinygo_main_file value="$PROJECT_DIR$" />
-    <tinygo_cmd_options value="-scheduler=none -panic=trap" />
+    <tinygo_cmd_options value="" />
     <tinygo_main_file value="$PROJECT_DIR$" />
     <tinygo_output_path value="" />
     <method v="2" />
